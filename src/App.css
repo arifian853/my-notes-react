@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+:root {
+  --green: #def5e5;
+  --green-dark: #8ec3b0;
+  --white: #f6fbf4;
+  --black: #062c30;
+}
+
+[data-theme='dark'] {
+  --font-color: #eee;
+  --background-color: #333;
+  --border-color : var(--white);
+  --border-color-black : var(--black);
+  --icon-color : invert() 
+}
+
+html,
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+  padding: 1em;
+  border-bottom: 1px solid var(--border-color-black);
+}
+
+
+.notes-app-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+  margin: 5vh auto;
+  width: 80em;
+  background-color: var(--background-color);
+  border: 1px solid var(--black);
+  color: var(--font-color);
+}
+
+
+.note-insert {
+  margin-top: 5vh;
+}
+
+.notes-app-input {
+  width: 40%;
+  height: 80vh;
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+  padding-right: 1em;
+}
+
+.notes-app {
+  width: 60%;
+  height: 80vh;
+  gap: 1em;
+  text-align: center;
+}
+
+.notes {
+  text-align: left;
+  border: 1px solid var(--black);
+  padding: 1em;
+  margin: 5vh auto;
+  background-color: var(--dark-yellow);
+  border-radius: 7px;
+  color: var(--font-color); 
+}
+
+.note-list {
+  height: 60vh;
+  overflow-y: scroll;
+  padding-right: 1em;
+}
+
+.btn-delete {
+  color: var(--black);
+  border: none;
+  background-color: var(--dark-yellow);
+  font-size: 28px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.btn-delete:hover {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.input-title {
+  width: 90%;
+  height: 1vh;
+  border: 1px solid var(--black);
+  border-radius: 7px;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 17px;
+}
+
+.input-content {
+  width: 90%;
+  height: 15vh;
+  margin: 3vh auto;
+  border: 1px solid var(--black);
+  border-radius: 7px;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 17px;
+}
+
+.note-insert button {
+  color: var(--black);
+  border: none;
+  background-color: var(--yellow);
+  font-size: 28px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.note-insert button:hover {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.prompt {
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+  margin: 30vh auto;
+  color: var(--white);
+  background-color: var(--black);
+  width: 50%;
+}
+
+.notes-details {
+  background-color: var(--white);
+  width: 90%;
+  margin: 5vh auto;
+  padding: 1em;
+  border: 1px solid var(--black);
+}
+
+.notes-details h1 {
+  text-align: center;
+}
+
+.back-btn {
+  color: var(--black);
+  border: none;
+  background-color: var(--dark-yellow);
+  font-size: 28px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+}
+
+.detail-wrapper {
+  padding: 5em;
+}
+
+.login-form {
+  background-color: var(--white);
+  width: 30em;
+  border: 1px solid var(--black);
+  margin: 10vh auto;
+  text-align: center;
+}
+
+.login-form form {
+  text-align: left;
+  padding: 2em;
+  margin-top: -5vh;
+}
+
+.login-form input {
+  width: 96%;
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 1vh;
+  border: 1px solid var(--black);
+}
+
+.login-form input:active {
+  border: 1px solid var(--green-dark);
+}
+
+.login-form button {
+  width: 50%;
+  background-color: var(--green-dark);
+  border: 1px solid var(--black);
+  padding: 5px;
+}
+
+.navigation-logout {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.navigation-logout ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+
+.navigation-logout ul li span{
+  background-color: var(--green);
+  font-size: 18px;
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 10px;
+}
+
+.navigation-logout ul li button{
+  background-color: var(--green);
+  font-size: 18px;
+  color: var(--black);
+  border: 1px solid var(--black);
+  padding: 10px;
+}
+
+.navigation-logout ul li button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .notes-app-wrapper {
+    flex-direction: column;
+    width: 85%;
+    height: 150vh;
+  }
+
+  .notes-app-input {
+    width: 100%;
+    height: 70vh;
+    border-right: none;
+  }
+
+  .notes-app {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .notes-details {
+    background-color: var(--white);
+    width: 85%;
+    margin: 5vh auto;
+    padding: 1em;
+    border: 1px solid var(--black);
+  }
+}
